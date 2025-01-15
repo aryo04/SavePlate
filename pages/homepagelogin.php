@@ -10,7 +10,7 @@
     </div>
     <div class="carousel">
         <div class="carousel-images">
-            <img src="../images/promomcd.jpg" alt="Promo Image 1" class="carousel-image">
+            <img src="../images/promofo.jpg" alt="Promo Image 1" class="carousel-image">
         </div>
     </div>
 </section>
