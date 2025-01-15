@@ -15,21 +15,23 @@ h1 {
     margin: 0 0 16px 0;
 }
 
-#landing h1{
-font-size: 70px;
+#landing h1 {
+    font-size: 70px;
 }
 
 #landing .btn {
-font-size: 100%;
-width: 10px; /* Mengatur lebar spesifik */
-max-width: 100%; /* Mencegah tombol terlalu besar pada layar kecil */
+    font-size: 100%;
+    width: 10px; /* Mengatur lebar spesifik */
+    max-width: 100%; /* Mencegah tombol terlalu besar pada layar kecil */
 }
 
 #landing img {
-margin-left: auto;
-display: block;
-width: 90%; /* Sesuaikan ukuran gambar */
+    margin-left: auto;
+    display: block;
+    width: 100%; /* Pastikan gambar penuh lebar kontainer */
 }
+
+
 
 a {
     text-decoration: none;
@@ -780,9 +782,6 @@ border-radius: 50%; /* Membuat gambar bulat */
 #register p{
     margin-top: 10px;
 }
-
-
-
 
 
 /* Order Confirmation Page Styling */

@@ -8,10 +8,14 @@
             <a class="btn" href="../pages/login.php">Pesan</a>
         </div>
     </div>
-    <div>
-        <img src="../images/promofo.jpg" alt="Landing Image">
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="../images/promomcd.jpg" alt="Promo Image 1" class="carousel-image">
+        </div>
     </div>
 </section>
+
+
 
 <section id="about-us">
     <div>

@@ -57,7 +57,7 @@
 // Fungsi untuk meningkatkan jumlah
 function increaseQuantity(id) {
     let quantityInput = document.getElementById('quantity' + id);
-    quantityInput.value = parseInt(quantityInput.value) + 1;
+    quantityInput.value = parseInt(quantityInput.value) + 0;
 }
 
 // Fungsi untuk mengurangi jumlah
