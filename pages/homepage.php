@@ -2,12 +2,10 @@
 
 <section id="landing">
     <div>
-        <h1>SAVE MEALS</h1>
-        <h1>SAVE MONEY</h1>
-        <h1>SAVE EARTH</h1>
-        <p>Selamatkan makanan berlebih dengan beli dari restoran favoritmu dengan diskon 50%, tanpa syarat!</p>
+        <h1>Cepat Tiba, Hangat Terjaga!</h1>
+        <p>Pesan makanan favorit Anda sekarang dan nikmati layanan pengiriman yang cepat!</p>
         <div>
-            <a class="btn" href="#contact">Contact Us</a>
+            <a class="btn" href="../pages/login.php">Pesan</a>
         </div>
     </div>
     <div>
@@ -18,9 +16,8 @@
 <section id="about-us">
     <div>
         <h1>About Us</h1>
-        <p>Indonesia merupakan salah satu penyumbang sampah makanan terbesar di dunia. Kesadaran ini berawal dari banyaknya makanan berlebih yang masih layak konsumsi, tetapi berakhir di tempat sampah telah mendorong kami untuk bertindak.</p>
-        <p>Oleh karena itu, kami hadir sebagai agen perubahan. Melalui website SavePlate, kami menjembatani restoran, warung, dan pembeli yang peduli terhadap lingkungan.</p>
-        <p>Bersama, kita dapat mengurangi limbah makanan, membantu mereka yang membutuhkan, dan memberi makna baru pada makanan yang sering dianggap remeh. Setiap pembelian bukan hanya sekadar mengisi perut, tetapi juga menjadi langkah nyata dalam upaya menyelamatkan bumi kita dengan mengurangi <b>food waste.</b></p>
+        <p>Selamat datang di SavePlate, tempat di mana Anda dapat menikmati hidangan lezat dari restoran-restoran terbaik di kota. Kami hadir untuk memberikan solusi praktis bagi Anda yang ingin menikmati makanan favorit tanpa keluar rumah. Dengan bekerja sama dengan berbagai restoran terkenal, kami menawarkan berbagai menu, mulai dari makanan ringan hingga hidangan berat, siap diantar langsung ke pintu rumah Anda</p>
+        <p>Kami hadir untuk memastikan setiap hidangan yang Anda pesan tiba dengan cepat dan hangat terjaga, memberikan kepuasan maksimal. Dengan harga yang terjangkau dan pelayanan yang cepat, kami bertekad untuk terus memberikan pengalaman menyenangkan bagi setiap pelanggan. Terima kasih telah mempercayakan kami untuk menemani momen santap Anda.</p>
     </div>
 </section>
 
@@ -30,27 +27,15 @@
     </div>
     <div class="goals-list">
         <div class="goals-item">
-            <h2>Mengurangi food waste</h2>
+            <h2>Kemudahan Akses Makanan</h2>
             <p>
-                Menyelamatkan makanan layak konsumsi untuk mengurangi limbah.
+                Memudahkan pelanggan menikmati makanan favorit tanpa keluar rumah.
             </p>
         </div>
         <div class="goals-item">
-            <h2>Edukasi dan kesadaran</h2>
+            <h2>Menyediakan Harga yang Kompetitif</h2>
             <p>
-                Menciptakan kesadaran tentang pentingnya pengelolaan makanan secara bijak.
-            </p>
-        </div>
-        <div class="goals-item">
-            <h2>Solusi ramah lingkungan</h2>
-            <p>
-                Menyediakan solusi bagi restoran dan konsumen untuk mengurangi sampah makanan.
-            </p>
-        </div>
-        <div class="goals-item">
-            <h2>Harga terjangkau</h2>
-            <p>
-                Memberikan akses makanan berlebih dengan harga terjangkau dan ramah lingkungan.
+                Menawarkan harga yang terjangkau tanpa mengurangi kualitas makanan. 
             </p>
         </div>
     </div>
