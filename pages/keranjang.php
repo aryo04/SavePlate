@@ -1,89 +1,94 @@
+<?php
+session_start();
+
+// Mengimpor koneksi ke database
+include('../db.php'); // Pastikan path menuju db.php benar
+
+// Menambahkan item ke keranjang
+if (isset($_POST['add_to_cart'])) {
+    $item_name = $_POST['item_name'];
+    $item_price = $_POST['item_price'];
+    $quantity = $_POST['quantity'];
+    $user_id = 1; // Gantilah dengan ID pengguna yang sesungguhnya
+
+    // Insert data item ke keranjang
+    $sql = "INSERT INTO cart (user_id, item_name, item_price, quantity) VALUES (?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$user_id, $item_name, $item_price, $quantity]);
+}
+
+// Menghapus item dari keranjang
+if (isset($_GET['remove'])) {
+    $cart_id = $_GET['remove'];
+
+    // Menghapus item berdasarkan ID
+    $sql = "DELETE FROM cart WHERE id = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$cart_id]);
+}
+
+// Menampilkan keranjang
+$user_id = 1; // Gantilah dengan ID pengguna yang sesungguhnya
+$sql = "SELECT * FROM cart WHERE user_id = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$user_id]);
+$cart_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Menghitung total harga
+$total_price = 0;
+foreach ($cart_items as $item) {
+    $total_price += $item['item_price'] * $item['quantity'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SavePlate - Keranjang</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <title>Keranjang Belanja</title>
     <link rel="stylesheet" href="../css/styleKeranjang.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container"> 
-            <h1>SavePlate</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../pages/homepagelogin.php">Home</a></li>
-                    <li><a href="">Menu</a>
-                        <ul class="dropdown">
-                            <li><a href="../pages/restoranmakananberat.php">Makanan Berat</a></li>
-                            <li><a href="../pages/restoranrotidankue.php">Roti dan Kue</a></li>
-                            <li><a href="../pages/restoranminuman.php">Minuman</a></li>
-                            <li><a href="../pages/restorancamilan.php">Camilan</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../pages/keranjang.php">Keranjang</a></li>
-                    <li class="profile">
-                        <a href="#">
-                            <img src="../images/profile.svg" alt="Profile" class="profile-icon"> 
-                        </a>
-                        <ul class="dropdown-profile">
-                            <li><a href="../pages/homepage.php">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include('../includes/headerMenu.php'); ?>
 
-    <div class="tabs">
-        <div class="tab" data-tab="belumDibayar">Belum Dibayar</div>
-        <div class="tab active" data-tab="pesananAktif">Pesanan Aktif</div>
-        <div class="tab" data-tab="pesananSelesai">Pesanan Selesai</div>
-        <div class="tab" data-tab="pesananDibatalkan">Pesanan Dibatalkan</div>
-    </div>
-
-    <!-- Content Keranjang -->
-    <div class="content" id="content">
-        <?php if (empty($cart)): ?>
-            <img src="placeholder.png" alt="No Orders">
-            <p>Kamu belum punya pesanan nih<br>Segera pesan dan selamatkan makanan favoritmu</p>
-            <a href="../pages/restorancamilan.php" class="btn">Pesan Sekarang</a>
-        <?php else: ?>
-            <h2>Keranjang Kamu</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nama Produk</th>
-                        <th>Harga</th>
-                        <th>Jumlah</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($cart as $item): ?>
+    <main>
+        <section class="cart">
+            <h2>Keranjang Belanja</h2>
+            
+            <?php if (empty($cart_items)): ?>
+                <p>Keranjang Anda kosong.</p>
+            <?php else: ?>
+                <table class="cart-table">
+                    <thead>
                         <tr>
-                            <td><?php echo $item['name']; ?></td>
-                            <td>Rp <?php echo number_format($item['price'], 0, ',', '.'); ?></td>
-                            <td><?php echo $item['quantity']; ?></td>
-                            <td>Rp <?php echo number_format($item['total_price'], 0, ',', '.'); ?></td>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Total</th>
+                            <th>Aksi</th>
                         </tr>
-                        <?php $total_price += $item['total_price']; ?>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-            <div class="total">
-                <p>Total Bayar: Rp <?php echo number_format($total_price, 0, ',', '.'); ?></p>
-                <form action="checkout.php" method="POST">
-                    <button type="submit" class="btn">Lanjutkan ke Pembayaran</button>
-                </form>
-            </div>
-        <?php endif; ?>
-    </div>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($cart_items as $item): ?>
+                        <tr>
+                            <td><?php echo $item['item_name']; ?></td>
+                            <td>Rp. <?php echo number_format($item['item_price'], 0, ',', '.'); ?></td>
+                            <td><?php echo $item['quantity']; ?></td>
+                            <td>Rp. <?php echo number_format($item['item_price'] * $item['quantity'], 0, ',', '.'); ?></td>
+                            <td><a href="?remove=<?php echo $item['id']; ?>" class="remove-item">Hapus</a></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <div class="cart-summary">
+                    <p>Total Belanja: Rp. <?php echo number_format($total_price, 0, ',', '.'); ?></p>
+                    <a href="../pages/checkout.php" class="checkout-button">Lanjutkan ke Pembayaran</a>
+                </div>
+            <?php endif; ?>
+        </section>
+    </main>
 
-    <script src="../tabs.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
