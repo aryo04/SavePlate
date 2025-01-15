@@ -4,11 +4,11 @@
         <section class="content">
             <h2>Restoran</h2>
             <div class="resto-grid">
-                <a href="../pages/makananberat.php" class="resto-item">
+                <a href="../pages/camilan.php" class="resto-item">
                     <h2>Pagi Sore</h2>
                     <img src="../images/pagisore.png" alt="Pagi Sore">
                 </a>
-                <a href="../pages/makananberat.php" class="resto-item">
+                <a href="../pages/camilan.php" class="resto-item">
                     <h2>Nasi Uduk</h2>
                     <img src="../images/nasiuduk.png" alt="Nasi Uduk">
                 </a>
