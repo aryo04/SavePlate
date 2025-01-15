@@ -40,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <?php include('../includes/headerMenu.php'); ?>
 
-    <main>  
+    <main>
         <section class="checkout">
             <h2>Checkout</h2>
             <form action="checkout.php" method="POST">
