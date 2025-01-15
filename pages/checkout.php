@@ -95,14 +95,13 @@ if (basename($_SERVER['PHP_SELF']) == 'order_confirmation.php') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleCo.css">
 </head>
 <body>
     <?php include('../includes/headerMenu.php'); ?>
 
     <main>
         <section class="checkout">
-            <h2>Checkout</h2>
             <form action="checkout.php" method="POST">
                 <h3>Informasi Pengiriman</h3>
                 <label for="name">Nama Lengkap</label>
