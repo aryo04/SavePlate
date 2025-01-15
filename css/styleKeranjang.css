@@ -189,7 +189,7 @@ nav ul li:hover > a {
 .tab.active {
     font-weight: bold;
     color: black;
-    border-bottom: 3px solid #007bff;
+    border-bottom: 3px solid #34a17b;
 }
 
 /* Content */
@@ -217,7 +217,7 @@ nav ul li:hover > a {
     padding: 15px 30px;
     font-size: 16px;
     color: white;
-    background-color: #007bff;
+    background-color: #59b092;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -225,7 +225,7 @@ nav ul li:hover > a {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #34a17b;
 }
 
 .search-container {
