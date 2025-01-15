@@ -4,35 +4,35 @@
         <section class="content">
             <h2>Restoran</h2>
             <div class="resto-grid">
-                <a href="../pages/camilan.php" class="resto-item">
+                <a href="../pages/menulawson.php" class="resto-item">
                     <h2>Lawson</h2>
                     <img src="../images/lawson.png" alt="Lawson">
                 </a>
-                <a href="../pages/camilan.php" class="resto-item">
+                <a href="../pages/menushihlin.php" class="resto-item">
                     <h2>Shihlin</h2>
                     <img src="../images/sihlin.png" alt="Shihlin">
                 </a>
-                <a href="ayam_geprek.html" class="resto-item">
+                <a href="menureddog.php" class="resto-item">
                     <h2>Red Dog</h2>
                     <img src="../images/reddog.png" alt="RedDog">
                 </a>
-                <a href="bakso.html" class="resto-item">
+                <a href="menufamima.php" class="resto-item">
                     <h2>Family Mart</h2>
                     <img src="../images/famima.png" alt="Famima">
                 </a>
-                <a href="mie_ayam.html" class="resto-item">
+                <a href="menupiscok.php" class="resto-item">
                     <h2>Pisang Coklat Lumer</h2>
                     <img src="../images/piscok.png" alt="Piscok">
                 </a>
-                <a href="sate_padang.html" class="resto-item">
+                <a href="menupuyo.php" class="resto-item">
                     <h2>Puyo</h2>
                     <img src="../images/puyo.png" alt="Puyo">
                 </a>
-                <a href="ketoprak.html" class="resto-item">
+                <a href="menumakaroni.php" class="resto-item">
                     <h2>Makaroni Queen</h2>
                     <img src="../images/makaroni.png" alt="Makaroni">
                 </a>
-                <a href="gado_gado.html" class="resto-item">
+                <a href="menupiskre.php" class="resto-item">
                     <h2>Pisang Kremes</h2>
                     <img src="../images/pisangkremes.png" alt="Pisang Kremes">
                 </a>

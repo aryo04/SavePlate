@@ -5,23 +5,23 @@
         <h2>Detail Produk</h2>
         <a href="restorancamilan.php" class="back-button">← Kembali ke Menu</a>
 
-        <!-- Form untuk Nasi Padang -->
+        <!-- Form untuk Oden -->
         <form action="../pages/keranjang.php" method="POST">
             <div class="product">
                 <div class="product-image">
-                    <img src="../images/nasipadang.png" alt="Nasi Padang">
+                    <img src="../images/XXLChickenShihlin.png" alt="Oden Lawson">
                 </div>
                 <div class="product-info">
-                    <h3>Nasi Padang</h3>
-                    <p>Nasi Padang dengan Gulai Tunjang, Daun Singkong, Sambal</p>
-                    <p class="price">Rp. 35.000,00</p>
+                    <h3>XXL Crispy Chicken</h3>
+                    <p>XXL Crispy Chicken Spicy Level & Varian Flavour</p>
+                    <p class="price">Rp. 48.000,00</p>
                     <div class="product-actions">
                         <button type="button" class="btn-quantity" onclick="decreaseQuantity('1')">-</button>
                         <input type="number" id="quantity1" name="quantity" value="1" min="1">
                         <button type="button" class="btn-quantity" onclick="increaseQuantity('1')">+</button>
                         <!-- Input tersembunyi untuk nama item dan harga -->
-                        <input type="hidden" name="item_name" value="Nasi Padang">
-                        <input type="hidden" name="item_price" value="35000">
+                        <input type="hidden" name="item_name" value="XXL Crispy Chicken">
+                        <input type="hidden" name="item_price" value="48000">
                         <button type="submit" name="add_to_cart" class="add-to-cart">🛒 Tambahkan ke Keranjang</button>
                     </div>
                 </div>
@@ -32,19 +32,19 @@
         <form action="../pages/keranjang.php" method="POST">
             <div class="product">
                 <div class="product-image">
-                    <img src="../images/nasiuduk.png" alt="Nasi Uduk">
+                    <img src="../images/DoubleShihlin.png" alt="Double Snack 1">
                 </div>
                 <div class="product-info">
-                    <h3>Nasi Uduk</h3>
-                    <p>Nasi Uduk dengan Telur & Kentang Balado, Orek Tempe, Bihun</p>
-                    <p class="price">Rp. 15.000,00</p>
+                    <h3>Double Snack 1</h3>
+                    <p>2 XXL</p>
+                    <p class="price">Rp. 91.000,00</p>
                     <div class="product-actions">
                         <button type="button" class="btn-quantity" onclick="decreaseQuantity('2')">-</button>
                         <input type="number" id="quantity2" name="quantity" value="1" min="1">
                         <button type="button" class="btn-quantity" onclick="increaseQuantity('2')">+</button>
                         <!-- Input tersembunyi untuk nama item dan harga -->
-                        <input type="hidden" name="item_name" value="Nasi Uduk">
-                        <input type="hidden" name="item_price" value="15000">
+                        <input type="hidden" name="item_name" value="Double Snack 1">
+                        <input type="hidden" name="item_price" value="91000">
                         <button type="submit" name="add_to_cart" class="add-to-cart">🛒 Tambahkan ke Keranjang</button>
                     </div>
                 </div>
