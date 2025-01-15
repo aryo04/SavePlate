@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SavePlate - Nasi Padang</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/stylemenu.css">
-    <script src="../menu.js"></script>
-</head>
-<body>
-    <header id="header">
-        <div class="container">
-            <h1>SavePlate</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../pages/homepagelogin.php">Home</a></li>
-                    <li><a href="../pages/restorancamilan.php">Menu</a></li>
-                    <li><a href="../pages/keranjang.php">Keranjang</a></li>
-                    <li class="profile">
-                        <a href="#">
-                            <img src="../images/profile.svg" alt="Profile" class="profile-icon"> <!-- Ganti dengan path gambar profil -->
-                        </a>
-                        <ul class="dropdown-profile">
-                            <li><a href="../pages/homepage.php">Logout</a></li> <!-- Link untuk logout -->
-                        </ul>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php include('../includes/headerMenu.php'); ?>
 
     <main>
         <section class="product-details">
