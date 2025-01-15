@@ -3,7 +3,7 @@
 <main>
     <section class="product-details">
         <h2>Detail Produk</h2>
-        <a href="restorancamilan.htmls" class="back-button">← Kembali ke Menu</a>
+        <a href="restoranrotidankue.php" class="back-button">← Kembali ke Menu</a>
 
         <!-- Form untuk Nasi Padang -->
         <form action="../pages/keranjang.php" method="POST">
