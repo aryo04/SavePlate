@@ -60,7 +60,7 @@ $order = $_SESSION['order'];
                 <p>Total Pembayaran: Rp. <?php echo number_format($total_price, 0, ',', '.'); ?></p>
             </div>
 
-            <p>Anda akan segera menerima konfirmasi pesanan melalui email dan detail pengiriman. Terima kasih telah berbelanja!</p>
+            <p>Untuk pembayaran dilakukan hanya ditempat saat driver sudah mengantarkan pesanannya!</p>
         </section>
     </main>
 
