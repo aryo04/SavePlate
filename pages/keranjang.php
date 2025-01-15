@@ -66,11 +66,10 @@ foreach ($_SESSION['cart'] as $item) {
     <?php include('../includes/headerMenu.php'); ?>
 
     <main>
-        <section class="cart">
-            <h2>Keranjang Belanja</h2>
-            
+    <section class="cart">
+        <h2>Keranjang Belanja</h2>
             <?php if (empty($_SESSION['cart'])): ?>
-                <p>Keranjang Anda kosong.</p>
+                <p style="text-align: center;">Keranjang Anda kosong.</p>
             <?php else: ?>
                 <table class="cart-table">
                     <thead>
