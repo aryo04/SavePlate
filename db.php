@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost:3307'; // Database host
-$db = 'saveplate'; // Database name
-$user = 'root'; // Database username, sesuaikan dengan kredensial Anda
-$pass = ''; // Database password, sesuaikan jika ada password
+$host = 'localhost'; 
+$db = 'saveplalatee'; 
+$user = 'root'; 
+$pass = ''; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);

@@ -780,3 +780,192 @@ border-radius: 50%; /* Membuat gambar bulat */
 #register p{
     margin-top: 10px;
 }
+
+/* Checkout Page Styling */
+.checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checkout-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.checkout-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.checkout-form .total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.checkout-form .btn-submit {
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-form .btn-submit:hover {
+    background-color: #27ae60;
+}
+
+.checkout-form .back-to-cart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-form .back-to-cart a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.checkout-form .back-to-cart a:hover {
+    text-decoration: underline;
+}
+
+
+/* Order Confirmation Page Styling */
+.order-confirmation-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-confirmation-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-confirmation-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.order-summary {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-summary .order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-summary .order-item span {
+    font-size: 16px;
+    color: #555;
+}
+
+.order-summary .order-item .item-name {
+    font-weight: bold;
+}
+
+.order-summary .order-item .item-price {
+    color: #e74c3c;
+}
+
+.order-summary .order-item .item-quantity {
+    font-weight: bold;
+}
+
+.order-summary .total-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.order-confirmation-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.order-confirmation-footer p {
+    font-size: 16px;
+    color: #555;
+}
+
+.order-confirmation-footer .btn-new-order {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.order-confirmation-footer .btn-new-order:hover {
+    background-color: #2980b9;
+}
+
+.order-confirmation-footer .back-to-home {
+    margin-top: 15px;
+}
+
+.order-confirmation-footer .back-to-home a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.order-confirmation-footer .back-to-home a:hover {
+    text-decoration: underline;
+}

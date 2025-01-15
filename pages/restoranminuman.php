@@ -5,36 +5,36 @@
             <h2>Restoran</h2>
             <div class="resto-grid">
                 <a href="../pages/makananberat.php" class="resto-item">
-                    <h2>Pagi Sore</h2>
-                    <img src="../images/pagisore.png" alt="Pagi Sore">
+                    <h2>Fore</h2>
+                    <img src="../images/fore.png" alt="fore">
                 </a>
                 <a href="../pages/makananberat.php" class="resto-item">
-                    <h2>Nasi Uduk</h2>
-                    <img src="../images/nasiuduk.png" alt="Nasi Uduk">
+                    <h2>Chatime</h2>
+                    <img src="../images/chatime.png" alt="chatime">
                 </a>
                 <a href="ayam_geprek.html" class="resto-item">
-                    <h2>Ayam Geprek</h2>
-                    <img src="../images/ayamgeprek.png" alt="Ayam Geprek">
+                    <h2>Starbucks</h2>
+                    <img src="../images/starbucks.png" alt="starbucks">
                 </a>
                 <a href="bakso.html" class="resto-item">
-                    <h2>Bakso</h2>
-                    <img src="../images/bakso.png" alt="Bakso">
+                    <h2>Tomoro Coffee</h2>
+                    <img src="../images/tomoro.png" alt="Tomoro">
                 </a>
                 <a href="mie_ayam.html" class="resto-item">
-                    <h2>Mie Ayam</h2>
-                    <img src="../images/mieayam.png" alt="Mie Ayam">
+                    <h2>Boost</h2>
+                    <img src="../images/boost.png" alt="boost">
                 </a>
                 <a href="sate_padang.html" class="resto-item">
-                    <h2>Sate Padang</h2>
-                    <img src="../images/satepadang.png" alt="Sate Padang">
+                    <h2>Xiboba</h2>
+                    <img src="../images/xiboba.png" alt="xiboba">
                 </a>
                 <a href="ketoprak.html" class="resto-item">
-                    <h2>Ketoprak</h2>
-                    <img src="../images/ketoprak.png" alt="Ketoprak">
+                    <h2>Mixue</h2>
+                    <img src="../images/mixue.png" alt="mixue">
                 </a>
                 <a href="gado_gado.html" class="resto-item">
-                    <h2>Gado-Gado</h2>
-                    <img src="../images/gadogado.png" alt="Gado-Gado">
+                    <h2>Teh Poci</h2>
+                    <img src="../images/teh.png" alt="teh">
                 </a>
             </div>
         </section>

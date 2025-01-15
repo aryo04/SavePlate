@@ -1,269 +1,120 @@
-* {
-    font-family: "Montserrat";
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-html, body {
-    padding: 0;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-}
-
-#header {
-    padding: 16px 128px;
-    position: sticky;
-    top: 0;
-    background-color: #34a17b;
-    z-index: 5;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1295px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-#header h1 {
-    margin: 0;
-    animation: bounceIn 1s;
-    color: white;
-    font-size: 48px;
-}
-
-@keyframes bounceIn {
-    0% {
-        filter: opacity(0);
-        transform: translateY(-20px);
-    }
-    35% {
-        filter: opacity(0.25);
-        transform: translateY(0);
-    }
-    70% {
-        filter: opacity(0.5);
-        transform: translateY(-10px);
-    }
-    100% {
-        filter: opacity(1);
-        transform: translateY(0);
-    }
-}
-
-@keyframes flash {
-    from {
-        filter: opacity(0);
-    }
-    to {
-        filter: opacity(1);
-    }
-}
-
-/*NavBar*/
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 200;
-    font-size: 24px;
-    display: block;
     padding: 0;
 }
 
-nav ul li a:hover {
-    color: black;
-}
-
-/* Dropdown Menu */
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #34a17b;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 0;
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-.dropdown li {
-    list-style: none;
-    padding: 10px 20px;
-}
-
-.dropdown li a {
+/* Header Menu */
+header {
+    background-color: #333;
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 0;
-    display: block;
-}
-
-.dropdown li a:hover {
-    background-color: #34a17b;
-}
-
-nav ul li:hover > a {
-    color: black;
-}
-
-/* Gaya untuk dropdown */
-.dropdown-profile {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #34a17b;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 0;
-}
-
-.profile:hover .dropdown-profile {
-    display: block;
-}
-
-.dropdown-profile li {
-    list-style: none;
-    padding: 10px 20px;
-}
-
-.dropdown-profile li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 0;
-    display: block;
-}
-
-.dropdown-profile li a:hover {
-    background-color: #34a17b;
-}
-
-/* Gaya untuk gambar profil */
-.profile {
-    position: relative;
-    display: inline-block;
-}
-    
-.profile-icon {
-    width: 30px; /* Ukuran gambar profil */
-    height: 30px;
-    border-radius: 50%; /* Membuat gambar bulat */
-}
-
-/* Tabs*/
-.tabs {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
-}
-
-.tab {
+    padding: 15px 0;
     text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
     font-size: 16px;
-    color: #888;
-    cursor: pointer;
-    padding: 5px 10px;
 }
 
-.tab.active {
-    font-weight: bold;
-    color: black;
-    border-bottom: 3px solid #34a17b;
+/* Main Section */
+main {
+    padding: 20px;
 }
 
-/* Content */
-.content {
+.cart {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
     text-align: center;
-    padding: 50px 20px;
 }
 
-.content img {
-    width: 150px;
-    height: 150px;
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.content p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 30px;
-    line-height: 1.5;
+.cart-table th,
+.cart-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
 }
 
-/* Button */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 16px;
-    color: white;
-    background-color: #59b092;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
+.cart-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.cart-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.cart-table .remove-item {
+    color: red;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.btn:hover {
-    background-color: #34a17b;
+.cart-table .remove-item:hover {
+    color: #c00;
 }
 
-.search-container {
-    position: relative; /* Menambahkan posisi relatif pada container */
+.cart-summary {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.search-input {
-    padding: 25px;
-    width: 75%;
-    border: 2px solid black; /* Menambahkan border hitam di sekitar input */
-    border-radius: 20px; /* Membuat border input melengkung */
-    margin-right: 8px;
-    outline: none; /* Menghapus outline default saat fokus */
-    padding-left: 55px; /* Memberikan ruang untuk ikon di kiri input */
+.cart-summary a {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.search-btn {
-    background-color: transparent; /* Menghapus latar belakang tombol */
-    border: none; /* Menghapus border tombol */
-    cursor: pointer;
-    position: absolute; /* Mengatur posisi ikon di dalam input */
-    left: 10px; /* Posisi ikon di dalam kotak pencarian */
-    top: 50%;
-    transform: translateY(-50%); /* Vertikal center */
+.cart-summary a:hover {
+    background-color: #45a049;
 }
 
-.search-icon {
-    width: 50px; /* Ukuran ikon lebih kecil */
-    height: 20px;
+.cart-empty {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
 }
 
-.search-btn:hover {
-    background-color: transparent; /* Tidak ada perubahan saat tombol disorot */
-}
+/* Responsiveness */
+@media (max-width: 768px) {
+    .cart {
+        width: 90%;
+    }
 
-.search-input:focus {
-    outline: none; /* Menghapus outline saat input difokuskan */
-    box-shadow: none; /* Menghapus shadow jika ada */
+    .cart-summary {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-summary a {
+        margin-top: 10px;
+    }
 }
