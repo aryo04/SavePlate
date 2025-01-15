@@ -2,7 +2,7 @@
     <main>
         <section class="product-details">
             <h2>Detail Produk</h2>
-            <a href="restoranmakannaberat.php" class="back-button">← Kembali ke Menu</a>
+            <a href="restoranmakananberat.php" class="back-button">← Kembali ke Menu</a>
 
             <div class="product">
                 <div class="product-image">
