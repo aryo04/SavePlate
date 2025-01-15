@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost'; 
-$db = 'saveplalatee'; 
+$db = 'saveplate'; 
 $user = 'root'; 
 $pass = ''; 
 
