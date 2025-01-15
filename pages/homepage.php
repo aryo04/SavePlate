@@ -9,7 +9,7 @@
         </div>
     </div>
     <div>
-        <img src="../images/savefood.jpeg" alt="Landing Image">
+        <img src="../images/promofo.jpg" alt="Landing Image">
     </div>
 </section>
 
@@ -48,19 +48,19 @@
             <div class="icon">
                 <img src="../images/environmentalism.png" alt="Environment Icon">
             </div>
-            <h2>Eco-Awareness</h2>
+            <h2>Integrity</h2>
         </div>
         <div class="value-card">
             <div class="icon">
                 <img src="../images/idea.png" alt="Innovation Icon">
             </div>
-            <h2>Innovation</h2>
+            <h2>Quality</h2>
         </div>
         <div class="value-card">
             <div class="icon">
                 <img src="../images/influencer.png" alt="Social Icon">
             </div>
-            <h2>Social Impact</h2>
+            <h2>Efficiency</h2>
         </div>
     </div>
 </section>
