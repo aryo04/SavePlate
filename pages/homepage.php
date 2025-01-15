@@ -8,11 +8,18 @@
             <a class="btn" href="../pages/login.php">Pesan</a>
         </div>
     </div>
-    <div class="carousel">
+    <div class="carousel-container">
+            <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
+            <img id="carousel-image" src="../images/promofo.jpg" alt="Promo Image">
+            <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
+        </div>
+        <script src="images.js" defer></script>
+
+    <!-- <div class="carousel">
         <div class="carousel-images">
             <img src="../images/promofo.jpg" alt="Promo Image 1" class="carousel-image">
         </div>
-    </div>
+    </div> -->
 </section>
 
 
@@ -95,7 +102,7 @@
         function setSpeed(speed) {
             logoSlide.style.animationDuration = speed + 's';
         }
-    </script>
+    </scrip>
 </section>
 
 <section id="contact">

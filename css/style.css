@@ -887,3 +887,28 @@ border-radius: 50%; /* Membuat gambar bulat */
 .order-confirmation-footer .back-to-home a:hover {
     text-decoration: underline;
 }
+
+
+#carousel {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-container img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
