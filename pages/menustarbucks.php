@@ -9,19 +9,19 @@
         <form action="../pages/keranjang.php" method="POST">
             <div class="product">
                 <div class="product-image">
-                    <img src="../images/milkteachatime.png" alt="Nasi Padang">
+                    <img src="../images/carameljava.png" alt="Nasi Padang">
                 </div>
                 <div class="product-info">
-                    <h3>Chatime Milk Tea</h3>
-                    <p>Teh dicampur Susu yang segar dipadukan dengan Es Batu</p>
-                    <p class="price">Rp. 23.000,00</p>
+                    <h3>Caramel Java Chip</h3>
+                    <p>Minuman Blended dari Starbucks yang terbuat dari kopi, saus moka, susu, es, krim kocok, dan taburan moka.</p>
+                    <p class="price">Rp. 64.000,00</p>
                     <div class="product-actions">
                         <button type="button" class="btn-quantity" onclick="decreaseQuantity('1')">-</button>
                         <input type="number" id="quantity1" name="quantity" value="1" min="1">
                         <button type="button" class="btn-quantity" onclick="increaseQuantity('1')">+</button>
                         <!-- Input tersembunyi untuk nama item dan harga -->
-                        <input type="hidden" name="item_name" value="Chatime Milk Tea">
-                        <input type="hidden" name="item_price" value="23000">
+                        <input type="hidden" name="item_name" value="Caramel Java Chip">
+                        <input type="hidden" name="item_price" value="64000">
                         <button type="submit" name="add_to_cart" class="add-to-cart">🛒 Tambahkan ke Keranjang</button>
                     </div>
                 </div>
@@ -32,19 +32,19 @@
         <form action="../pages/keranjang.php" method="POST">
             <div class="product">
                 <div class="product-image">
-                    <img src="../images/mangogreentea.png" alt="Nasi Uduk">
+                    <img src="../images/greenteacream.png" alt="Nasi Uduk">
                 </div>
                 <div class="product-info">
-                    <h3>Mango Green Tea</h3>
-                    <p>Minuman Mangga dicampur dengan Teh Hijau Murni</p>
-                    <p class="price">Rp. 26.000,00</p>
+                    <h3>Green Tea Cream</h3>
+                    <p>Minuman yang terbuat dari teh hijau, susu, dan es batu serta dilengkapi dengan whipped cream.</p>
+                    <p class="price">Rp. 70.000,00</p>
                     <div class="product-actions">
                         <button type="button" class="btn-quantity" onclick="decreaseQuantity('2')">-</button>
                         <input type="number" id="quantity2" name="quantity" value="1" min="1">
                         <button type="button" class="btn-quantity" onclick="increaseQuantity('2')">+</button>
                         <!-- Input tersembunyi untuk nama item dan harga -->
-                        <input type="hidden" name="item_name" value="Mango Green Tea">
-                        <input type="hidden" name="item_price" value="26000">
+                        <input type="hidden" name="item_name" value="Green Tea Cream">
+                        <input type="hidden" name="item_price" value="70000">
                         <button type="submit" name="add_to_cart" class="add-to-cart">🛒 Tambahkan ke Keranjang</button>
                     </div>
                 </div>
