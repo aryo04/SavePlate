@@ -86,12 +86,12 @@
     </div>
     <div class="logo-container">
         <div class="logo-slide">
-            <img src="https://i.pinimg.com/1200x/6a/3c/72/6a3c7273e15eae0eec08f9d4cf682795.jpg" alt="Mitra 1">
-            <img src="https://i.pinimg.com/736x/20/e9/c1/20e9c1db58c46249e15b24deb5a3c288.jpg" alt="Mitra 2">
-            <img src="https://i.pinimg.com/736x/59/6c/8c/596c8c3071c7d35fab81f471957ffa69.jpg" alt="Mitra 3">
-            <img src="https://i.pinimg.com/736x/67/c8/90/67c89057350e29604afa548e6b973207.jpg" alt="Mitra 4">
-            <img src="https://i.pinimg.com/736x/b8/c2/84/b8c2844cedae3dffa87ec9f569934759.jpg" alt="Mitra 5">
-            <img src="https://i.pinimg.com/736x/41/d6/20/41d620bd0ea7cd1c6cb149fa8c05edc0.jpg" alt="Mitra 6">
+            <img src="https://i.pinimg.com/736x/e2/c1/08/e2c1080746b1314e2bf5edfbda79dbce.jpg" alt="Mitra 1">
+            <img src="https://i.pinimg.com/736x/f6/ce/28/f6ce28ace42558f80de02ff523275a37.jpg" alt="Mitra 2">
+            <img src="https://i.pinimg.com/736x/a5/46/15/a546154e3cef9763742c87152b188e4f.jpg" alt="Mitra 3">
+            <img src="https://i.pinimg.com/736x/29/5a/9d/295a9d6507ac6c1a134cae2b7f873c02.jpg" alt="Mitra 4">
+            <img src="https://i.pinimg.com/736x/3f/aa/b0/3faab01617407ec23d3e400cda84216f.jpg" alt="Mitra 5">
+            <img src="https://i.pinimg.com/736x/ea/3e/ce/ea3ecece4b2fd90648b80180513c76e7.jpg" alt="Mitra 6">
         </div>
     </div>
 </section>
