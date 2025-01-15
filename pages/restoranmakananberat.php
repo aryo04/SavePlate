@@ -5,28 +5,28 @@
             <h2>Restoran</h2>
             <div class="resto-grid">
                 <a href="../pages/makananberat.php" class="resto-item">
+                    <h2>KFC</h2>
+                    <img src="../images/kfc.png" alt="KFC">
+                </a>
+                <a href="../pages/makananberat.php" class="resto-item">
                     <h2>Pagi Sore</h2>
                     <img src="../images/pagisore.png" alt="Pagi Sore">
                 </a>
-                <a href="../pages/makananberat.php" class="resto-item">
-                    <h2>Nasi Uduk</h2>
-                    <img src="../images/nasiuduk.png" alt="Nasi Uduk">
-                </a>
                 <a href="ayam_geprek.html" class="resto-item">
-                    <h2>Ayam Geprek</h2>
-                    <img src="../images/ayamgeprek.png" alt="Ayam Geprek">
+                    <h2>McDonalds</h2>
+                    <img src="../images/mcd.png" alt="McDonalds">
                 </a>
                 <a href="bakso.html" class="resto-item">
-                    <h2>Bakso</h2>
-                    <img src="../images/bakso.png" alt="Bakso">
+                    <h2>Starbucks</h2>
+                    <img src="../images/starbucks.png" alt="Starbucks">
                 </a>
                 <a href="mie_ayam.html" class="resto-item">
-                    <h2>Mie Ayam</h2>
-                    <img src="../images/mieayam.png" alt="Mie Ayam">
+                    <h2>Burger King</h2>
+                    <img src="../images/burgerking.png" alt="Burger King">
                 </a>
                 <a href="sate_padang.html" class="resto-item">
-                    <h2>Sate Padang</h2>
-                    <img src="../images/satepadang.png" alt="Sate Padang">
+                    <h2>Breadtalk</h2>
+                    <img src="../images/breadtalk.png" alt="Breadtalk">
                 </a>
                 <a href="ketoprak.html" class="resto-item">
                     <h2>Ketoprak</h2>
