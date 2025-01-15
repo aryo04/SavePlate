@@ -1,0 +1,150 @@
+/* ====== General Styling ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ====== Header Styling ====== */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+header a:hover {
+    color: #1abc9c;
+}
+
+/* ====== Order Confirmation Section ====== */
+.order-confirmation {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.order-total{
+    font-weight: 700;
+}
+
+/* ====== Table Styling ====== */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cart-table thead {
+    background: #1abc9c;
+    color: white;
+    font-size: 18px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.cart-table tbody tr:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.cart-table tbody tr:hover {
+    background: #eaeaea;
+    transition: background 0.3s;
+}
+
+/* ====== Total Payment Row in Table ====== */
+.total-row {
+    font-weight: bold;
+    background: #27ae60;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.total-row td {
+    padding: 15px;
+}
+
+/* ====== Buttons Styling ====== */
+button, .checkout-button, .remove-item {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.checkout-button {
+    background: #3498db;
+    color: white;
+}
+
+.checkout-button:hover {
+    background: #2980b9;
+}
+
+.remove-item {
+    background: #e74c3c;
+    color: white;
+}
+
+.remove-item:hover {
+    background: #c0392b;
+}
+
+/* ====== Footer Styling ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ====== Responsive Design ====== */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 10px;
+    }
+
+    button, .checkout-button, .remove-item {
+        width: 100%;
+    }
+}

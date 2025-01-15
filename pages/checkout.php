@@ -1,37 +1,92 @@
 <?php
 session_start();
 
-// Memeriksa apakah keranjang belanja kosong
-if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
-    header("Location: keranjang.php"); // Jika kosong, arahkan kembali ke halaman keranjang
+// Memeriksa apakah keranjang sudah ada
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+
+// Menambahkan item ke keranjang
+if (isset($_POST['add_to_cart'])) {
+    $item_name = $_POST['item_name'];
+    $item_price = $_POST['item_price'];
+    $quantity = $_POST['quantity'];
+
+    // Cek apakah item sudah ada di keranjang
+    $item_exists = false;
+    foreach ($_SESSION['cart'] as &$item) {
+        if ($item['item_name'] == $item_name) {
+            $item['quantity'] += $quantity;
+            $item_exists = true;
+            break;
+        }
+    }
+    if (!$item_exists) {
+        $_SESSION['cart'][] = [
+            'item_name' => $item_name,
+            'item_price' => $item_price,
+            'quantity' => $quantity
+        ];
+    }
+
+    header("Location: keranjang.php");
     exit;
 }
 
-// Jika form checkout disubmit, simpan data ke database atau kirim email konfirmasi
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $phone = $_POST['phone'];
-    $total_price = $_POST['total_price'];
-
-    // Proses data pesanan, bisa menyimpannya ke database atau mengirim email
-    // Sebagai contoh, kita akan mengarahkan pengguna ke halaman konfirmasi
-    $_SESSION['order'] = [
-        'name' => $name,
-        'address' => $address,
-        'phone' => $phone,
-        'total_price' => $total_price,
-        'cart' => $_SESSION['cart']
-    ];
-
-    // Mengosongkan keranjang setelah pesanan diproses
-    unset($_SESSION['cart']);
-
-    // Arahkan ke halaman konfirmasi
-    header("Location: order_confirmation.php");
+// Menghapus item dari keranjang
+if (isset($_GET['remove'])) {
+    $remove_index = $_GET['remove'];
+    unset($_SESSION['cart'][$remove_index]);
+    $_SESSION['cart'] = array_values($_SESSION['cart']);
+    header("Location: keranjang.php");
     exit;
 }
 
+// Halaman checkout.php
+if (basename($_SERVER['PHP_SELF']) == 'checkout.php') {
+    if (empty($_SESSION['cart'])) {
+        header("Location: keranjang.php");
+        exit;
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $phone = $_POST['phone'];
+
+        $_SESSION['order'] = [
+            'name' => $name,
+            'address' => $address,
+            'phone' => $phone,
+            'cart' => $_SESSION['cart'],
+            'total_price' => array_sum(array_map(function ($item) {
+                return $item['item_price'] * $item['quantity'];
+            }, $_SESSION['cart']))
+        ];
+
+        unset($_SESSION['cart']);
+        header("Location: order_confirmation.php");
+        exit;
+    }
+}
+
+// Halaman order_confirmation.php
+if (basename($_SERVER['PHP_SELF']) == 'order_confirmation.php') {
+    if (!isset($_SESSION['order'])) {
+        header("Location: keranjang.php");
+        exit;
+    }
+    $order = $_SESSION['order'];
+    echo "<h1>Terima Kasih, " . htmlspecialchars($order['name']) . "!</h1>";
+    echo "<p>Alamat Pengiriman: " . htmlspecialchars($order['address']) . "</p>";
+    echo "<p>Nomor Telepon: " . htmlspecialchars($order['phone']) . "</p>";
+    echo "<h2>Ringkasan Pesanan</h2>";
+    foreach ($order['cart'] as $item) {
+        echo "<p>{$item['item_name']} x {$item['quantity']} - Rp. " . number_format($item['item_price'] * $item['quantity'], 0, ',', '.') . "</p>";
+    }
+    echo "<p>Total: Rp. " . number_format($order['total_price'], 0, ',', '.') . "</p>";
+    unset($_SESSION['order']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <?php include('../includes/headerMenu.php'); ?>
@@ -49,56 +104,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <section class="checkout">
             <h2>Checkout</h2>
             <form action="checkout.php" method="POST">
-                <div class="checkout-details">
-                    <h3>Informasi Pengiriman</h3>
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" name="name" required>
+                <h3>Informasi Pengiriman</h3>
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required>
 
-                    <label for="address">Alamat Pengiriman</label>
-                    <textarea id="address" name="address" required></textarea>
+                <label for="address">Alamat Pengiriman</label>
+                <textarea id="address" name="address" required></textarea>
 
-                    <label for="phone">Nomor Telepon</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" id="phone" name="phone" required>
 
-                    <input type="hidden" name="total_price" value="<?php echo isset($total_price) ? $total_price : 0; ?>">
-
-                    <button type="submit" class="checkout-button">Konfirmasi Pembayaran</button>
-                </div>
+                <button type="submit" class="checkout-button">Konfirmasi Pembayaran</button>
             </form>
-
-            <div class="order-summary">
-                <h3>Ringkasan Pesanan</h3>
-                <table class="cart-table">
-                    <thead>
-                        <tr>
-                            <th>Nama Produk</th>
-                            <th>Harga</th>
-                            <th>Jumlah</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $total_price = 0;
-                        foreach ($_SESSION['cart'] as $item):
-                            $total_price += $item['item_price'] * $item['quantity'];
-                        ?>
-                        <tr>
-                            <td><?php echo $item['item_name']; ?></td>
-                            <td>Rp. <?php echo number_format($item['item_price'], 0, ',', '.'); ?></td>
-                            <td><?php echo $item['quantity']; ?></td>
-                            <td>Rp. <?php echo number_format($item['item_price'] * $item['quantity'], 0, ',', '.'); ?></td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-                <div class="cart-summary">
-                    <p>Total Belanja: Rp. <?php echo number_format($total_price, 0, ',', '.'); ?></p>
-                </div>
-            </div>
         </section>
     </main>
-
-    <script src="../script.js"></script>
 </body>
 </html>
