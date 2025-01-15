@@ -65,13 +65,13 @@ if (basename($_SERVER['PHP_SELF']) == 'checkout.php') {
         ];
 
         unset($_SESSION['cart']);
-        header("Location: order_confirmation.php");
+        header("Location: riwayat.php");
         exit;
     }
 }
 
-// Halaman order_confirmation.php
-if (basename($_SERVER['PHP_SELF']) == 'order_confirmation.php') {
+// Halaman riwayat.php
+if (basename($_SERVER['PHP_SELF']) == 'riwayat.php') {
     if (!isset($_SESSION['order'])) {
         header("Location: keranjang.php");
         exit;

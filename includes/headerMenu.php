@@ -26,6 +26,7 @@
                         </ul>
                     </li>
                     <li><a href="../pages/keranjang.php">Keranjang</a></li>
+                    <li><a href="../pages/riwayat.php">Riwayat</a></li>
                     <li class="profile">
                         <a href="#">
                             <img src="../images/profile.svg" alt="Profile" class="profile-icon"> <!-- Ganti dengan path gambar profil -->
