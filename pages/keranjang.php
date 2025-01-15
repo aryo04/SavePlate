@@ -1,27 +1,3 @@
-<?php
-session_start(); // Memulai session untuk keranjang
-
-// Menangani form POST yang dikirim dari camilan.php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $item_name = $_POST['item_name'] ?? '';
-    $item_price = $_POST['item_price'] ?? 0;
-    $quantity = $_POST['quantity'] ?? 1;
-    $total_price = $item_price * $quantity;
-
-    // Menyimpan item ke dalam keranjang (session)
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = [];
-    }
-
-    // Menambahkan item ke dalam keranjang
-    $_SESSION['cart'][] = ['name' => $item_name, 'price' => $item_price, 'quantity' => $quantity, 'total_price' => $total_price];
-}
-
-// Mengambil data keranjang
-$cart = $_SESSION['cart'] ?? [];
-$total_price = 0;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
