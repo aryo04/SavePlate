@@ -25,16 +25,16 @@
                     <img src="../images/burgerking.png" alt="Burger King">
                 </a>
                 <a href="sate_padang.html" class="resto-item">
-                    <h2>Breadtalk</h2>
-                    <img src="../images/breadtalk.png" alt="Breadtalk">
+                    <h2>Solaria</h2>
+                    <img src="../images/solaria.png" alt="Solaria">
                 </a>
                 <a href="ketoprak.html" class="resto-item">
-                    <h2>Ketoprak</h2>
-                    <img src="../images/ketoprak.png" alt="Ketoprak">
+                    <h2>Hokben</h2>
+                    <img src="../images/Hokben.png" alt="Hokben">
                 </a>
                 <a href="gado_gado.html" class="resto-item">
-                    <h2>Gado-Gado</h2>
-                    <img src="../images/gadogado.png" alt="Gado-Gado">
+                    <h2>A&W</h2>
+                    <img src="../images/a&w.png" alt="A&W">
                 </a>
             </div>
         </section>
