@@ -3,25 +3,25 @@
 <main>
     <section class="product-details">
         <h2>Detail Produk</h2>
-        <a href="restoranrotidankue.php" class="back-button">← Kembali ke Menu</a>
+        <a href="restoranminuman.php" class="back-button">← Kembali ke Menu</a>
 
         <!-- Form untuk Nasi Padang -->
         <form action="../pages/keranjang.php" method="POST">
             <div class="product">
                 <div class="product-image">
-                    <img src="../images/nasipadang.png" alt="Nasi Padang">
+                    <img src="../images/brwnsgrmilk.png" alt="Nasi Padang">
                 </div>
                 <div class="product-info">
-                    <h3>Nasi Padang</h3>
-                    <p>Nasi Padang dengan Gulai Tunjang, Daun Singkong, Sambal</p>
-                    <p class="price">Rp. 35.000,00</p>
+                    <h3>Brown Sugar Boba Fresh Milk</h3>
+                    <p>Minuman yang terbuat dari susu segar, boba, dan sirup gula merah.</p>
+                    <p class="price">Rp. 19.000,00</p>
                     <div class="product-actions">
                         <button type="button" class="btn-quantity" onclick="decreaseQuantity('1')">-</button>
                         <input type="number" id="quantity1" name="quantity" value="1" min="1">
                         <button type="button" class="btn-quantity" onclick="increaseQuantity('1')">+</button>
                         <!-- Input tersembunyi untuk nama item dan harga -->
-                        <input type="hidden" name="item_name" value="Nasi Padang">
-                        <input type="hidden" name="item_price" value="35000">
+                        <input type="hidden" name="item_name" value="Brown Sugar Boba Fresh Milk">
+                        <input type="hidden" name="item_price" value="19000">
                         <button type="submit" name="add_to_cart" class="add-to-cart">🛒 Tambahkan ke Keranjang</button>
                     </div>
                 </div>
@@ -32,19 +32,19 @@
         <form action="../pages/keranjang.php" method="POST">
             <div class="product">
                 <div class="product-image">
-                    <img src="../images/nasiuduk.png" alt="Nasi Uduk">
+                    <img src="../images/brwnsgrboba.png" alt="Nasi Uduk">
                 </div>
                 <div class="product-info">
-                    <h3>Nasi Uduk</h3>
-                    <p>Nasi Uduk dengan Telur & Kentang Balado, Orek Tempe, Bihun</p>
-                    <p class="price">Rp. 15.000,00</p>
+                    <h3>Brown Sugar Boba Milk Tea</h3>
+                    <p>Minuman yang terbuat dari susu segar, boba, gula aren, dan krim yang dibakar. </p>
+                    <p class="price">Rp. 19.000,00</p>
                     <div class="product-actions">
                         <button type="button" class="btn-quantity" onclick="decreaseQuantity('2')">-</button>
                         <input type="number" id="quantity2" name="quantity" value="1" min="1">
                         <button type="button" class="btn-quantity" onclick="increaseQuantity('2')">+</button>
                         <!-- Input tersembunyi untuk nama item dan harga -->
-                        <input type="hidden" name="item_name" value="Nasi Uduk">
-                        <input type="hidden" name="item_price" value="15000">
+                        <input type="hidden" name="item_name" value="Brown Sugar Boba Milk Tea">
+                        <input type="hidden" name="item_price" value="19000">
                         <button type="submit" name="add_to_cart" class="add-to-cart">🛒 Tambahkan ke Keranjang</button>
                     </div>
                 </div>
@@ -71,4 +71,3 @@ function decreaseQuantity(id) {
 
 </body>
 </html>
-    
