@@ -11,10 +11,24 @@ if (isset($_POST['add_to_cart'])) {
     $quantity = $_POST['quantity'];
     $user_id = 1; // Gantilah dengan ID pengguna yang sesungguhnya
 
-    // Insert data item ke keranjang
-    $sql = "INSERT INTO cart (user_id, item_name, item_price, quantity) VALUES (?, ?, ?, ?)";
+    // Cek apakah item sudah ada di keranjang
+    $sql = "SELECT * FROM cart WHERE user_id = ? AND item_name = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$user_id, $item_name, $item_price, $quantity]);
+    $stmt->execute([$user_id, $item_name]);
+    $existing_item = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($existing_item) {
+        // Jika item sudah ada, update jumlahnya
+        $new_quantity = $existing_item['quantity'] + $quantity;
+        $sql = "UPDATE cart SET quantity = ? WHERE id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$new_quantity, $existing_item['id']]);
+    } else {
+        // Jika item belum ada, tambahkan item baru
+        $sql = "INSERT INTO cart (user_id, item_name, item_price, quantity) VALUES (?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$user_id, $item_name, $item_price, $quantity]);
+    }
 }
 
 // Menghapus item dari keranjang
@@ -83,7 +97,7 @@ foreach ($cart_items as $item) {
                 </table>
                 <div class="cart-summary">
                     <p>Total Belanja: Rp. <?php echo number_format($total_price, 0, ',', '.'); ?></p>
-                    <a href="../pages/checkout.php" class="checkout-button">Lanjutkan ke Pembayaran</a>
+                    <a href="checkout.php" class="checkout-button">Lanjutkan ke Pembayaran</a>
                 </div>
             <?php endif; ?>
         </section>

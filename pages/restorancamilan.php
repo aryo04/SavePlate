@@ -5,36 +5,36 @@
             <h2>Restoran</h2>
             <div class="resto-grid">
                 <a href="../pages/camilan.php" class="resto-item">
-                    <h2>Pagi Sore</h2>
-                    <img src="../images/pagisore.png" alt="Pagi Sore">
+                    <h2>Lawson</h2>
+                    <img src="../images/lawson.png" alt="Lawson">
                 </a>
                 <a href="../pages/camilan.php" class="resto-item">
-                    <h2>Nasi Uduk</h2>
-                    <img src="../images/nasiuduk.png" alt="Nasi Uduk">
+                    <h2>Shihlin</h2>
+                    <img src="../images/sihlin.png" alt="Shihlin">
                 </a>
                 <a href="ayam_geprek.html" class="resto-item">
-                    <h2>Ayam Geprek</h2>
-                    <img src="../images/ayamgeprek.png" alt="Ayam Geprek">
+                    <h2>Red Dog</h2>
+                    <img src="../images/reddog.png" alt="RedDog">
                 </a>
                 <a href="bakso.html" class="resto-item">
-                    <h2>Bakso</h2>
-                    <img src="../images/bakso.png" alt="Bakso">
+                    <h2>Family Mart</h2>
+                    <img src="../images/famima.png" alt="Famima">
                 </a>
                 <a href="mie_ayam.html" class="resto-item">
-                    <h2>Mie Ayam</h2>
-                    <img src="../images/mieayam.png" alt="Mie Ayam">
+                    <h2>Pisang Coklat Lumer</h2>
+                    <img src="../images/piscok.png" alt="Piscok">
                 </a>
                 <a href="sate_padang.html" class="resto-item">
-                    <h2>Sate Padang</h2>
-                    <img src="../images/satepadang.png" alt="Sate Padang">
+                    <h2>Puyo</h2>
+                    <img src="../images/puyo.png" alt="Puyo">
                 </a>
                 <a href="ketoprak.html" class="resto-item">
-                    <h2>Ketoprak</h2>
-                    <img src="../images/ketoprak.png" alt="Ketoprak">
+                    <h2>Makaroni Queen</h2>
+                    <img src="../images/makaroni.png" alt="Makaroni">
                 </a>
                 <a href="gado_gado.html" class="resto-item">
-                    <h2>Gado-Gado</h2>
-                    <img src="../images/gadogado.png" alt="Gado-Gado">
+                    <h2>Pisang Kremes</h2>
+                    <img src="../images/pisangkremes.png" alt="Pisang Kremes">
                 </a>
             </div>
         </section>
