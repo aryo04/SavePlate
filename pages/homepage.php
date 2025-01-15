@@ -87,13 +87,26 @@
     <div class="logo-container">
         <div class="logo-slide">
             <img src="https://i.pinimg.com/736x/e2/c1/08/e2c1080746b1314e2bf5edfbda79dbce.jpg" alt="Mitra 1">
-            <img src="https://i.pinimg.com/736x/f6/ce/28/f6ce28ace42558f80de02ff523275a37.jpg" alt="Mitra 2">
+            <img src="https://i.pinimg.com/736x/fc/39/fc/fc39fcad149b7149317c4ae616673eda.jpg" alt="Mitra 2">
             <img src="https://i.pinimg.com/736x/a5/46/15/a546154e3cef9763742c87152b188e4f.jpg" alt="Mitra 3">
             <img src="https://i.pinimg.com/736x/29/5a/9d/295a9d6507ac6c1a134cae2b7f873c02.jpg" alt="Mitra 4">
             <img src="https://i.pinimg.com/736x/3f/aa/b0/3faab01617407ec23d3e400cda84216f.jpg" alt="Mitra 5">
             <img src="https://i.pinimg.com/736x/ea/3e/ce/ea3ecece4b2fd90648b80180513c76e7.jpg" alt="Mitra 6">
         </div>
     </div>
+
+    <script>
+        // Script untuk memastikan animasi berjalan mulus
+        const logoSlide = document.querySelector('.logo-slide');
+            
+        // Clone logo-logo untuk infinite scroll yang mulus
+        logoSlide.innerHTML += logoSlide.innerHTML;
+            
+        // Optional: Tambahkan kontrol kecepatan
+        function setSpeed(speed) {
+            logoSlide.style.animationDuration = speed + 's';
+        }
+    </script>
 </section>
 
 <section id="contact">
