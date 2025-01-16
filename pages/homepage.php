@@ -8,18 +8,11 @@
             <a class="btn" href="../pages/login.php">Pesan</a>
         </div>
     </div>
-    <div class="carousel-container">
-            <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
-            <img id="carousel-image" src="../images/promofo.jpg" alt="Promo Image">
-            <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
-        </div>
-        <script src="images.js" defer></script>
-
-    <!-- <div class="carousel">
+    <div class="carousel">
         <div class="carousel-images">
             <img src="../images/promofo.jpg" alt="Promo Image 1" class="carousel-image">
         </div>
-    </div> -->
+    </div>
 </section>
 
 
@@ -57,7 +50,7 @@
     <div class="values-container">
         <div class="value-card">
             <div class="icon">
-                <img src="../images/environmentalism.png" alt="Environment Icon">
+                <img src="../images/agree.png" alt="Environment Icon">
             </div>
             <h2>Integrity</h2>
         </div>
@@ -69,7 +62,7 @@
         </div>
         <div class="value-card">
             <div class="icon">
-                <img src="../images/influencer.png" alt="Social Icon">
+                <img src="../images/real.png" alt="Social Icon">
             </div>
             <h2>Efficiency</h2>
         </div>
@@ -78,7 +71,7 @@
 
 <section id="service">
     <div class="service-header">
-        <h1>Mitra yang Telah Bergabung</h1>
+        <h1>Partners Who Have Joined</h1>
     </div>
     <div class="logo-container">
         <div class="logo-slide">
@@ -102,7 +95,7 @@
         function setSpeed(speed) {
             logoSlide.style.animationDuration = speed + 's';
         }
-    </scrip>
+    </script>
 </section>
 
 <section id="contact">
@@ -132,8 +125,8 @@
                     <input type="text" placeholder="Your Message">
                 </div>
             </div>
-            <button class="btn"><a href="login.php">Login Terlebih Dahulu</a></button>
-        </form>
+            <a href="../pages/login.php" class="btn">Login Terlebih Dahulu</a>
+            </form>
         
         <div id="location">
             <h1>Our Location</h1>

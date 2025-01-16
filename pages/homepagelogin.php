@@ -50,7 +50,7 @@
     <div class="values-container">
         <div class="value-card">
             <div class="icon">
-                <img src="../images/environmentalism.png" alt="Environment Icon">
+                <img src="../images/agree.png" alt="Environment Icon">
             </div>
             <h2>Integrity</h2>
         </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="value-card">
             <div class="icon">
-                <img src="../images/influencer.png" alt="Social Icon">
+                <img src="../images/real.png" alt="Social Icon">
             </div>
             <h2>Efficiency</h2>
         </div>
@@ -71,7 +71,7 @@
 
 <section id="service">
     <div class="service-header">
-        <h1>Mitra yang Telah Bergabung</h1>
+        <h1>Partners Who Have Joined</h1>
     </div>
     <div class="logo-container">
         <div class="logo-slide">
